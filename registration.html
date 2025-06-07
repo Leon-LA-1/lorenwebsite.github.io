@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santa Laurensia Registration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: url(img2.png) center/cover no-repeat fixed;
+      min-height: 100vh;
+      color: #333;
+    }
+
+     body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+      z-index: -1;
+      backdrop-filter: blur(2px); 
+    }
+
+    header {
+      background: white;
+      padding: 1.5rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 60px;
+      margin-right: 15px;
+    }
+
+    .logo-text h1 {
+      font-size: 1.4rem;
+      color: #003366;
+      font-weight: 800;
+    }
+
+    .logo-text p {
+      font-size: 0.85rem;
+      font-style: italic;
+      color: #666;
+    }
+
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: #003366;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #007acc;
+    }
+
+    .cta-button {
+      background: #7b5e3e;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border-radius: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-left: 2rem;
+      transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: #5a442d;
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: 4rem auto;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: #003366;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #333;
+      font-weight: 600;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      outline: none;
+      transition: border 0.3s ease;
+    }
+
+    input:focus, select:focus {
+      border-color: #007acc;
+    }
+
+    button {
+      width: 100%;
+      background: #003366;
+      color: white;
+      padding: 0.75rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #00509e;
+    }
+
+    footer {
+      background: #003366;
+      color: #eee;
+      text-align: center;
+      padding: 1.5rem 2rem;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo-las.png" alt="School Logo">
+      <div class="logo-text">
+        <h1>Santa Laurensia Senior High School</h1>
+        <p>Joyful Learning Experience in Holistic Education</p>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="aboutus.html">About</a>
+      <a href="curriculum.html">Curriculum</a>
+      <a class="cta-button" href="registration.html">Register Now!</a>
+    </nav>
+  </header>
+
+  <div class="form-container">
+    <h2>Student Registration Form</h2>
+    <form id="registrationForm">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="grade">Applying for Grade</label>
+        <select id="grade" name="grade" required>
+          <option value="">-- Select Grade --</option>
+          <option value="10">Grade 10</option>
+          <option value="11">Grade 11</option>
+          <option value="12">Grade 12</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Santa Laurensia High School. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('registrationForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const grade = document.getElementById('grade').value;
+      const dob = document.getElementById('dob').value;
+      const phone = document.getElementById('phone').value.trim();
+
+      if (!name || !email || !grade || !dob || !phone) {
+        alert('Please fill in all fields before submitting.');
+        return;
+      }
+
+      alert(`Thank you, ${name}! Your registration has been received.`);
+      document.getElementById('registrationForm').reset();
+    });
+  </script>
+</body>
+</html>

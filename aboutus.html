@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santa Laurensia Senior High School</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: url(loreen.jpg) no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+      z-index: -1;
+      backdrop-filter: blur(2px);
+    }
+
+    h4 {
+      color: #ffffff;
+      text-align: center;
+    }
+
+    h5 {
+      color: black;
+    }
+
+    header {
+      background: white;
+      padding: 1.5rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 60px;
+      margin-right: 15px;
+    }
+
+    .logo-text h1 {
+      font-size: 1.4rem;
+      color: #003366;
+      font-weight: 800;
+    }
+
+    .logo-text p {
+      font-size: 0.85rem;
+      font-style: italic;
+      color: #666;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: #003366;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #007acc;
+    }
+
+    .cta-button {
+      background: #7b5e3e;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border-radius: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-left: 2rem;
+      transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: #5a442d;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      text-align: center;
+      color: white;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #2490fd;
+    }
+
+    .section p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      flex: 1 1 300px;
+      max-width: 300px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #7b5e3e;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background: #003366;
+      color: #eee;
+      text-align: center;
+      padding: 1.5rem 2rem;
+    }
+
+    @media (max-width: 900px) {
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .logo-section,
+      .vision-mission-boxes {
+        flex-direction: column !important;
+      }
+
+      .logo-section img {
+        margin-top: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo-las.png" alt="School Logo">
+      <div class="logo-text">
+        <h1>Santa Laurensia Senior High School</h1>
+        <p>Joyful Learning Experience in Holistic Education</p>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#curriculum">Curriculum</a>
+      <a class="cta-button" href="registration.html">Register Now!</a>
+    </nav>
+  </header>
+
+  <section class="section" id="about">
+    <h2>About Us</h2>
+    <h4>Santa Laurensia Senior High School provides holistic education combining academic excellence with character formation. Our bilingual environment nurtures globally aware students with strong moral values.</h4>
+  </section>
+
+  <section class="section" id="vision-mission">
+    <h2>Vision & Mission</h2>
+    <div class="vision-mission-boxes" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 2rem;">
+      <div style="flex: 1 1 300px; background: white; padding: 2rem; border-radius: 15px; color: #333; max-width: 500px;">
+        <h3 style="color: #7b5e3e;">Our Vision</h3>
+        <p>To become a leading educational institution that nurtures students into joyful, responsible, and globally aware individuals with a strong foundation of moral integrity.</p>
+      </div>
+      <div style="flex: 1 1 300px; background: white; padding: 2rem; border-radius: 15px; color: #333; max-width: 500px;">
+        <h3 style="color: #7b5e3e;">Our Mission</h3>
+        <ul style="padding-left: 1rem; list-style: disc;">
+          <li>To provide a holistic education system with a global perspective</li>
+          <li>To establish a school community that develops good character and the ability to interact socially in appropriate ways</li>
+          <li>To practice faith, hope, and love in daily life</li>
+          <li>To create professional and conductive working atmosphere for educators and staff</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logo Explanation Section -->
+  <section class="section" id="logo-explanation" style="background-color: rgba(255,255,255,0.15); padding: 4rem 2rem;">
+    <h2>Our School Logo</h2>
+    <div class="logo-section" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2rem; margin-top: 2rem;">
+      <div style="flex: 1 1 400px; background: white; padding: 2rem; border-radius: 15px; color: #333; max-width: 600px;">
+        <p>The logo contains multiple symbols and features each having their own meaning:
+Eagle bird: Symbolizes strength, perserverance and courage. This symbol embodies the character of our students, to be both independently driven yet globally concerned as well as people of integrity, competency, and faith
+Cross-shaped star: Cross symbolizes the sacrifice of Jesus Christ to save mankind from SIN. It also symbolizes victory over self-centeredness, which is not in harmony with the will of God.
+MCM XCIV: Represents the year when Santa Laurensia was first founded which was 1996</p>
+      </div>
+      <div style="flex: 1 1 300px; max-width: 300px;">
+        <img src="logo-las.png" alt="Santa Laurensia Logo" style="width: 100%; border-radius: 12px;" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="curriculum">
+    <h2>Our Curriculum</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Edexcel International IGCSE Curriculum</h3>
+        <h5>We adopt the globally recognized Edexcel IGCSE framework to prepare students with strong academic foundations and internationally benchmarked standards.</h5>
+      </div>
+      <div class="card">
+        <h3>CS Subject System</h3>
+        <h5>Our Core Subject system allows students to choose 3 subjects from the curriculum. It may be a mix of STEM and Social subjects, or it can be purely STEM or Social Subjects. It depends entirely on where our students see themselves in the future.</h5>
+      </div>
+      <div class="card">
+        <h3>Elective Classes</h3>
+        <h5>Each year, students may choose 2 electives from a wide selection of arts and sports courses, including the option to focus on either or both disciplines.</h5>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="register">
+    <h2>Join Our Family</h2>
+    <p>Be part of our joyful learning community! Visit our official site to learn more about registration procedures.</p>
+    <a class="cta-button" href="https://www.santa-laurensia.com/">Visit Official Website</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Santa Laurensia High School. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>School Location - Santa Laurensia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: url(suvarnabg.png) center/cover no-repeat fixed;
+      color: #333;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+      z-index: -1;
+      backdrop-filter: blur(2px); 
+    }
+
+    header {
+      background: white;
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 50px;
+      margin-right: 15px;
+    }
+
+    .logo-text h1 {
+      font-size: 1.3rem;
+      color: #003366;
+      font-weight: 800;
+    }
+
+    .logo-text p {
+      font-size: 0.8rem;
+      font-style: italic;
+      color: #666;
+    }
+
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: #003366;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #007acc;
+    }
+
+    .cta-button {
+      background: #7b5e3e;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-left: 2rem;
+      transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: #5a442d;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 120px auto 60px;
+      padding: 0 1.5rem;
+    }
+
+    .section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
+      padding: 2rem;
+      gap: 2rem;
+    }
+
+    .section.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .section-text {
+      flex: 1;
+    }
+
+    .section-text h2 {
+      color: #003366;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-text p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #444;
+    }
+
+    .section-img {
+      flex: 1;
+    }
+
+    .section-img img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    footer {
+      background: #003366;
+      color: #eee;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+      }
+
+      .section.reverse {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo-las.png" alt="School Logo">
+      <div class="logo-text">
+        <h1>Santa Laurensia Senior High School</h1>
+        <p>Joyful Learning Experience in Holistic Education</p>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="aboutus.html">About</a>
+      <a href="curriculum.html">Curriculum</a>
+      <a class="cta-button" href="registration.html">Register Now!</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="section">
+      <div class="section-text">
+        <h2>Our Location</h2>
+        <p>Our newest branch of the school is based in the newly opened Suvarna Sutera housing complex, which in itself is a branch of the Alam Sutera group. With this newest branch, we aim to further our reach so that students may receive quality education closer to home.</p>
+      </div>
+      <div class="section-img">
+        <img src="suvarnaloc.jpeg" alt="School Location Image">
+      </div>
+    </div>
+
+    <div class="section reverse">
+      <div class="section-text">
+        <h2>How to Get Here</h2>
+        <p>The school is accessible by car, bus, and motorcycle. We're about 34 minutes our branch in the Alam Sutera region.</p>
+      </div>
+      <div class="section-img">
+        <a href="https://www.google.com/maps/place/St.+Laurensia+School+-+Suvarna+Sutera/@-6.1818048,106.495559,978m/data=!3m1!1e3!4m10!1m2!2m1!1sSanta+Laurensia+Suvarna+Sutera!3m6!1s0x2e42005a1cd783fb:0xf20e8d191f2c5a61!8m2!3d-6.181843!4d106.500045!15sCh5TYW50YSBMYXVyZW5zaWEgU3V2YXJuYSBTdXRlcmGSARhnZW5lcmFsX2VkdWNhdGlvbl9zY2hvb2yqAUYQATIeEAEiGnK-fmDXVov0OYYJKHD9CMiFXCKpmtalN2X2MiIQAiIec2FudGEgbGF1cmVuc2lhIHN1dmFybmEgc3V0ZXJh4AEA!16s%2Fg%2F11f0_c2r67?authuser=1&entry=ttu&g_ep=EgoyMDI1MDYwMy4wIKXMDSoASAFQAw%3D%3D"><img src="suvarnamap.png" alt="Route to School Image"></a>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-text">
+        <h2>Brief History</h2>
+        <p>Santa Laurensia School established its Suvarna Sutera campus in 2018 to extend its holistic, Catholic-based education to the growing communities in Tangerang. The primary school officially opened on July 12, 2018, followed by the senior high school on March 18, 2019. This expansion was driven by the school's mission to provide a nurturing and globally minded learning environment that fosters intellectual, emotional, and spiritual growth. Despite initial delays due to local concerns over the nature of the development, the project proceeded after clarifications confirmed it was an educational facility, not a religious institution. Today, the Suvarna Sutera campus offers Kindergarten through Senior High School programs, continuing Santa Laurensia's commitment to excellence in education.</p>
+      </div>
+      <div class="section-img">
+        <img src="img4.png" alt="Nearby Area Image">
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Santa Laurensia High School. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santa Laurensia Registration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+     *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      background: url(img2.png) no-repeat center center fixed;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    a {
+      color: #7b5e3e;
+      text-decoration: none;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: url('your-background.jpg') center/cover no-repeat fixed;
+      min-height: 100vh;
+      color: #333;
+    }
+
+    header {
+      background: white;
+      padding: 1.5rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 60px;
+      margin-right: 15px;
+    }
+
+    .logo-text h1 {
+      font-size: 1.4rem;
+      color: #003366;
+      font-weight: 800;
+    }
+
+    .logo-text p {
+      font-size: 0.85rem;
+      font-style: italic;
+      color: #666;
+    }
+
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: #003366;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #007acc;
+    }
+
+    .cta-button {
+      background: #7b5e3e;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border-radius: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-left: 2rem;
+      transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: #5a442d;
+    }
+
+    footer {
+      background: #003366;
+      color: #eee;
+      text-align: center;
+      padding: 1.5rem 2rem;
+      margin-top: 4rem;
+    }
+
+     .curriculum-wrapper {
+      display: flex;
+      flex-direction: row;
+      margin: 2rem;
+    }
+
+    nav.curriculum-sidebar {
+      position: sticky;
+      top: 5rem;
+      align-self: flex-start;
+      padding: 1rem;
+      background-color: #fff;
+      border-radius: 8px;
+      margin-right: 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav.curriculum-sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav.curriculum-sidebar ul li {
+      margin-bottom: 0.75rem;
+    }
+
+    nav.curriculum-sidebar ul li a {
+      color: #003366;
+      font-weight: 600;
+    }
+
+    nav.curriculum-sidebar ul li a.active {
+      color: #ff9900;
+    }
+
+    .curriculum-section {
+      flex: 1;
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .curriculum-header-main {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .curriculum-header-main h2 {
+      font-size: 2rem;
+      color: #003366;
+    }
+
+    .subject-section {
+      margin-bottom: 3rem;
+    }
+
+    .subject-section h3 {
+      color: #7b5e3e;
+      border-bottom: 2px solid #ffcc99;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.6rem;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .card {
+      flex: 1 1 220px;
+      background-color: #fff3e6;
+      padding: 1rem;
+      border-radius: 8px;
+      border-left: 4px solid #ff9900;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .card h4 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      color: #7b5e3e;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    .accordion {
+      margin-top: 2rem;
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid #ddd;
+    }
+
+    .accordion-item button {
+      background-color: transparent;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-size: 1rem;
+      padding: 1rem 0;
+      font-weight: bold;
+      color: #003366;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .accordion-item button:hover {
+      color: #ff9900;
+    }
+
+    .accordion-content {
+      display: none;
+      padding-bottom: 1rem;
+      padding-left: 1rem;
+      color: #444;
+    }
+
+    .accordion-content.open {
+      display: block;
+    }
+
+    @media (max-width: 992px) {
+      .curriculum-wrapper {
+        flex-direction: column;
+        margin: 1rem;
+      }
+
+      nav.curriculum-sidebar {
+        position: relative;
+        margin-bottom: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+    <div class="logo">
+      <img src="logo-las.png" alt="School Logo">
+      <div class="logo-text">
+        <h1>Santa Laurensia Senior High School</h1>
+        <p>Joyful Learning Experience in Holistic Education</p>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="aboutus.html">About</a>
+      <a class="cta-button" href="registration.html">Register Now!</a>
+    </nav>
+</header>
+<div class="curriculum-wrapper">
+
+  <nav class="curriculum-sidebar" aria-label="Curriculum Navigation">
+    <ul>
+      <li><a href="#igcse" class="active">Edexcel IGCSE</a></li>
+      <li><a href="#core-subjects">Core Subjects</a></li>
+      <li><a href="#electives">Elective Classes</a></li>
+    </ul>
+  </nav>
+
+  <section id="curriculum" class="curriculum-section">
+    <header class="curriculum-header-main">
+      <h2 class="section-title">Our Curriculum</h2>
+      </a>
+    </header>
+
+    <section id="igcse" class="subject-section">
+      <h3>What is the Edexcel IGCSE Curriculum?</h3>
+      <p>The Edexcel International General Certificate of Secondary Education (IGCSE) is a globally recognized qualification for students typically aged 14 to 16. Designed to be both accessible and challenging, it emphasizes academic excellence while allowing flexibility through a wide range of subject choices.</p>
+    </section>
+
+    <section id="core-subjects" class="subject-section">
+      <h3>Core Subjects</h3>
+      <div class="cards">
+        <div class="card">
+          <h4>STEM</h4>
+          <p>Our curriculum includes the complete list of STEM subjects, which includes Physics, Biology, Chemistry and IT</p>
+        </div>
+        <div class="card">
+          <h4>Social Studies</h4>
+          <p>Subjects included in this field are History and Sociology.</p>
+        </div>
+        <div class="card">
+          <h4>Business and Economics</h4>
+          <p>For aspiring entrepreneurs, subjects in this category for students to choose include Business, Economics and Accounting.</p>
+        </div>
+        <div class="card">
+          <h4>Language Literature</h4>
+          <p>Students may also take language subjects as their core subjects. These include Mandarin and German. These are useful for those aiming for overseas universities, especially those in Germany who provide a full scholarship for a certain level in German comprehension.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="electives" class="subject-section">
+      <h3>Elective Classes</h3>
+      <div class="cards">
+        <div class="card">
+          <h4>Basketball</h4>
+          <p>One of the most popular sport elective among students. Those who join will also have the option to be a part of the Basketball School Team should they pass the selection process</p>
+        </div>
+        <div class="card">
+          <h4>Badminton</h4>
+          <p>Also another popular sport among our students. Just like basketball, students will also have a chance to join the Badminton School Team and participate in inter-school competitions.</p>
+        </div>
+        <div class="card">
+          <h4>Music Ensemble</h4>
+          <p>Students can group into pairs, trios or groups of 4-5 and unleash their musical talents for the entire school to see. Members will participate in end-of-year performances and even collaborate with Performing Arts to provide music for drama performances!</p>
+        </div>
+        <div class="card">
+          <h4>Performing Arts</h4>
+          <p>For those who adore acting and wish to express themselves, performing arts will allow you to do just that. Join other students and create a drama an unforgetable drama performance!</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="accordion" aria-label="More Information">
+      <div class="accordion-item">
+        <button aria-expanded="false" aria-controls="faq1" onclick="toggleAccordion('faq1')">How are students assessed?</button>
+        <div id="faq1" class="accordion-content">
+          <p>Students are assessed through a combination of written exams and practical coursework depending on the subject. Exams are externally marked by Edexcel examiners to ensure consistency and fairness.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button aria-expanded="false" aria-controls="faq2" onclick="toggleAccordion('faq2')">What support do you offer for IGCSE students?</button>
+        <div id="faq2" class="accordion-content">
+          <p>We provide after-school tutoring, exam prep workshops, and access to online learning platforms to help students succeed in their IGCSE subjects.</p>
+        </div>
+      </div>
+    </section>
+  </section>
+
+</div>
+
+<script>
+  function toggleAccordion(id) {
+    const content = document.getElementById(id);
+    content.classList.toggle('open');
+    const button = content.previousElementSibling;
+    const expanded = button.getAttribute('aria-expanded') === 'true';
+    button.setAttribute('aria-expanded', !expanded);
+  }
+</script>
+<footer>
+    <p>&copy; 2025 Santa Laurensia High School. All rights reserved.</p>
+  </footer>
+</body>
+</html>
